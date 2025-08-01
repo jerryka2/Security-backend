@@ -23,3 +23,5 @@ const doctorModel =
   mongoose.model('doctor', doctorSchema);
 
 export default doctorModel;
+
+

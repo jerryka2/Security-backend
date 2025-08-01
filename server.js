@@ -13,7 +13,7 @@ import connectDB from "./config/mongodb.js";
 import { handleCsrfError } from "./middleware/csrfProtection.js";
 import adminRouter from "./routes/adminRoute.js";
 import csrfRouter from "./routes/csrfRoute.js";
-import doctorRouter from "./routes/eventRoute.js";
+import doctorRouter from "./routes/StationRoute.js";
 import stripeRouter from "./routes/stripeRoute.js";
 import userRouter from "./routes/userRoute.js";
 
@@ -33,7 +33,8 @@ app.use(cookieParser());
 const corsOptions = {
   origin: [
     "https://localhost:5173", // user frontend
-    "https://localhost:5174", // admin frontend
+    "https://localhost:5174",
+    "https://localhost:5175", // admin frontend
   ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
@@ -104,3 +105,5 @@ try {
   console.warn("Could not start HTTPS server, falling back to HTTP:", err.message);
   app.listen(port, () => console.log(`HTTP Server started on PORT:${port}`));
 }
+
+

@@ -199,3 +199,5 @@ const doctorDashboard = async (req, res) => {
 export {
     appointmentCancel, appointmentComplete, appointmentsDoctor, changeAvailablity, doctorDashboard, doctorList, doctorProfile, loginDoctor, updateDoctorProfile
 };
+
+

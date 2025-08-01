@@ -392,6 +392,7 @@ const updateProfile = async (req, res) => {
 };
 
 // Book appointment
+
 const bookAppointment = async (req, res) => {
   try {
     const { userId, docId, slotDate, slotTime } = req.body;
@@ -439,6 +440,9 @@ const bookAppointment = async (req, res) => {
     res.json({ success: false, message: error.message });
   }
 };
+
+
+
 
 // Cancel appointment
 const cancelAppointment = async (req, res) => {
